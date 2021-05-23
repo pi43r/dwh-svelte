@@ -1,23 +1,27 @@
 <script>
   import logo from './assets/svelte-logo.png'
-  import Counter from './lib/Counter.svelte'
+  import {Route} from 'tinro'; 
+
+  import Magazine from './Magazine.svelte'
+
+  import { onMount } from 'svelte';
+  import { createScene } from "./scene";
+  onMount(() => {
+    createScene()
+  });
 </script>
 
+
+
 <main>
-  <img src={logo} alt="Svelte Logo" />
-  <h1>Hello world!</h1>
-
-  <Counter />
-
+  <h1>Hello planet!</h1>
   <p>
-    Visit <a href="https://svelte.dev">svelte.dev</a> to learn how to build Svelte
-    apps.
+    <a href="/">Home</a>
+    |
+    <a href="/magazine/">Magazine</a>
   </p>
-
-  <p>
-    Check out <a href="https://github.com/sveltejs/kit#readme">SvelteKit</a> for
-    the officially supported framework, also powered by Vite!
-  </p>
+  
+  <div id="bg"></div>
 </main>
 
 <style>
@@ -30,12 +34,18 @@
     padding: 1em;
     margin: 0 auto;
   }
+  #bg{
+    position: fixed;
+    z-index: -10;
+    top: 0;
+    left: 0;
+  }
   img {
     height: 16rem;
     width: 16rem;
   }
   h1 {
-    color: #ff3e00;
+    color: #00ff3e;
     text-transform: uppercase;
     font-size: 4rem;
     font-weight: 100;
@@ -57,3 +67,10 @@
     }
   }
 </style>
+
+<Route path="/"></Route>
+<Route path="/magazine/*">
+    <Route path="/">
+        <Magazine />
+    </Route>
+</Route>
