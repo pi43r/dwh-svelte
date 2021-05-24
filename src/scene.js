@@ -30,8 +30,8 @@ function init() {
   )
 
   scene = new THREE.Scene()
-  scene.background = new THREE.Color(0x0f0105)
-  scene.fog = new THREE.FogExp2(0x0f0105, 0.0025)
+  scene.background = new THREE.Color(0x2B1940)
+  scene.fog = new THREE.FogExp2(0x2B1940, 0.0025)
   const data = generateHeight(worldWidth, worldDepth)
 
   const light = new THREE.AmbientLight( 0x4f4f4f ); // soft white light
@@ -79,7 +79,7 @@ function init() {
   renderer.setSize(window.innerWidth, window.innerHeight)
   container.appendChild(renderer.domElement)
 
-  controls = new FirstPersonControls(camera, renderer.domElement)
+  controls = new FirstPersonControls(camera, document.body)
   controls.movementSpeed = 0
   controls.lookSpeed = 0.1
   controls.lookVertical = false

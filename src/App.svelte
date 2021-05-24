@@ -14,12 +14,9 @@
 
 
 <main>
-  <h1>Hello planet!</h1>
-  <p>
-    <a href="/">Home</a>
-    |
+  <h1>
     <a href="/magazine/">Magazine</a>
-  </p>
+  </h1>
   
   <div id="bg"></div>
 </main>
@@ -44,13 +41,18 @@
     height: 16rem;
     width: 16rem;
   }
+  a{
+    text-decoration: none;
+    color: inherit;
+  }
   h1 {
-    color: #00ff3e;
+    color: #FFA700;
+    text-shadow: 0px 0px 12px #FFA700;
     text-transform: uppercase;
     font-size: 4rem;
-    font-weight: 100;
+    font-weight: 600;
     line-height: 1.1;
-    margin: 2rem auto;
+    margin: 45vh auto;
     max-width: 14rem;
   }
   p {

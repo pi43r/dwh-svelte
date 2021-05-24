@@ -31,17 +31,21 @@
 <style>
   section{
     background: #4f4f4f;
-    color: #00ff3e;
+    color: #FFA700;
+    text-shadow: 0px 0px 12px #FFA700;
     padding: 1vw;
     position: fixed;
     top: 5vh;
-    right: 5vh;
+    right: 15vw;
     width: 50vw;
     height: 90vh;
+    border-radius: 33px;
+    overflow-y: scroll;
   }
   .btn{
     background: #fff;
     padding: 5px;
     text-decoration: none;
+    border-radius: 10px;
   }
 </style>
